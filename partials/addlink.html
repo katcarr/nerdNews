@@ -1,11 +1,13 @@
-<form ng-submit="addLink()" role="form">
+<form ng-submit="LinksFactory.addLink()" role="form">
   <div class="form-group">
     <label>Add a Description</label>
-    <input class="form-control" type="text" ng-model="linkDescription" required autofocus>
+    <input class="form-control" type="text" ng-model="LinksFactory.linkDescription" required autofocus>
   </div>
   <div class="form-group">
     <label>Add Link</label>
-    <input class="form-control" type="text" ng-model="linkAddress" required>
+    <input class="form-control" type="text" ng-model="LinksFactory.linkAddress" required>
   </div>
   <button type="submit" class="btn btn-warning">Add Your Link</button>
 </form>
+
+<a ui-sref="home">Back</a>
