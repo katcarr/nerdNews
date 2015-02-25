@@ -8,8 +8,9 @@ nerdNews.factory("LinksFactory", function LinksFactory(){
     factory.links.push(link);
     factory.linkDescription = null;
     factory.linkAddress = null;
-  };
 
+
+  };
   return factory;
 
 });
