@@ -4,12 +4,18 @@ nerdNews.factory("LinksFactory", function LinksFactory($location){
 {description: "Synesthesia - Rare but real", address: "http://www.npr.org/programs/invisibilia/382451600/entanglement?showDate=2015-01-30"}];
 
   factory.addLink = function(){
-    var link = {description: factory.linkDescription, address: factory.linkAddress};
+    var link = {id: factory.links.length + 1, votes: 0, description: factory.linkDescription, address: factory.linkAddress};
     factory.links.push(link);
     factory.linkDescription = null;
     factory.linkAddress = null;
 
   };
+  // MAKE THIS
+  // factory.upVote = function() {
+  //
+  //
+  // };
+
   return factory;
 
 });
