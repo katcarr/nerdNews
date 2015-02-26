@@ -1,7 +1,7 @@
 <h1>Nerd News</h1>
 <h3>News When You Have Time To Not Have Time</h3>
 
-<ul ng-repeat="item in links">
+<ul ng-repeat="item in links | orderBy:'votes':true">
   <li>
     <img src="css/img/bigvote.jpg" ng-click="LinksFactory.upVote(item.id)">
     <a href="{{item.address}}" target="_blank">{{item.description}}</a>
