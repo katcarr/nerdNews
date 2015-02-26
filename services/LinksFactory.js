@@ -1,4 +1,4 @@
-nerdNews.factory("LinksFactory", function LinksFactory(){
+nerdNews.factory("LinksFactory", function LinksFactory($location){
   var factory = {};
   factory.links = [{description: "misophonia", address: "http://well.blogs.nytimes.com/2015/02/23/please-stop-making-that-noise/"},
 {description: "Synesthesia - Rare but real", address: "http://www.npr.org/programs/invisibilia/382451600/entanglement?showDate=2015-01-30"}];
@@ -8,7 +8,6 @@ nerdNews.factory("LinksFactory", function LinksFactory(){
     factory.links.push(link);
     factory.linkDescription = null;
     factory.linkAddress = null;
-
 
   };
   return factory;
