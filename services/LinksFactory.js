@@ -12,8 +12,7 @@ nerdNews.factory("LinksFactory", function LinksFactory($location){
   };
 
   factory.upVote = function(id) {
-debugger;
-    votes += 1;
+    factory.links[id-1].votes += 1;
   };
 
   return factory;
