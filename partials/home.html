@@ -18,7 +18,7 @@
         <div ng-controller="AccordionCtrl">
           <accordion close-others="oneAtATime">
               <accordion-group heading="{{item.description}}">
-              <a href="{{item.address}}" target="_blank">Go To This Page</a>
+              <a href="{{item.address}}" target="_blank">Go To This Page {{item.time}}</a>
                 <form role="form" ng-submit="LinksFactory.addComment(item.id)">
                   <textarea placeholder="Comments" ng-model ="LinksFactory.linkComments" rows="8" cols="40"></textarea>
                   <button class="btn btn-default btn-sm" type="submit">Add Comment</button>
