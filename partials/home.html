@@ -3,8 +3,33 @@
 
 <ul ng-repeat="item in links | orderBy:'votes':true">
   <li>
-    <img src="css/img/bigvote.jpg" ng-click="LinksFactory.upVote(item.id)">
+    <!-- <img src="css/img/bigvote.jpg" ng-click="LinksFactory.upVote(item.id)">
     <a href="{{item.address}}" target="_blank">{{item.description}}</a>
-    <p>{{item.votes}}</p>
+    <p>{{item.votes}}</p> -->
+
+
+
+    <div class="row">
+      <div class="col-sm-1 col-md-1">
+        <img src="css/img/bigvote.jpg" ng-click="LinksFactory.upVote(item.id)">
+        <p>{{item.votes}}</p>
+      </div>
+      <div class="col-md-11 col-sm-11">
+        <div ng-controller="AccordionCtrl">
+          <accordion close-others="oneAtATime">
+              <accordion-group heading="{{item.description}}">
+              <a href="{{item.address}}" target="_blank">Visit This Page</a>
+                <form role="form">
+                  <textarea placeholder="Comments" rows="8" cols="40"></textarea>
+                  <button class="btn btn-default btn-sm" ng-click="addItem()">Add Comment</button>
+                </form>
+
+
+                <div ng-repeat="item in items">{{item}}</div>
+            </accordion-group>
+          </accordion>
+        </div>
+      </div>
+    </div>
   </li>
 </ul>
