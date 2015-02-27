@@ -8,7 +8,6 @@ nerdNews.controller("LinksCtrl",  function LinksCtrl($scope, $state, $stateParam
     LinksFactory.addLink();
     $state.go("home");
 
-
   };
 
 

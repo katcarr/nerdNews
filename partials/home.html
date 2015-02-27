@@ -1,6 +1,8 @@
 <h1>Nerd News</h1>
 <h3>News When You Have Time To Not Have Time</h3>
 
+<div ng-controller="AccordionCtrl">
+<accordion close-others="oneAtATime">
 <ul ng-repeat="item in links | orderBy:predicate:reverse">
   <li>
     <div class="row">
@@ -9,11 +11,9 @@
         <p>{{item.votes}}</p>
       </div>
       <div class="col-md-11 col-sm-11 col-xs-11 link-box">
-        <div ng-controller="AccordionCtrl">
-          <accordion >
               <accordion-group heading="{{item.description}}">
               <accordion-heading>{{item.description}}     <em>{{item.time.toDateString()}}</em></accordion-heading>
-              <a href="{{item.address}}" target="_blank" close-others="oneAtATime">Go To This Page</a>
+              <a href="{{item.address}}" target="_blank" >Go To This Page</a>
                 <form role="form" ng-submit="LinksFactory.addComment(item.id)">
                   <textarea placeholder="Comments" ng-model ="LinksFactory.linkComments" rows="8" cols="40"></textarea>
                   <button class="btn btn-default btn-sm btn-warning" type="submit">Add Comment</button>
