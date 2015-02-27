@@ -18,8 +18,10 @@
       <div class="container-fluid">
         <div class="navbar-header">
           <ul class="nav nav-justified navbar-fixed-top" role="tablist">
+            <li role="presentation"><a ui-sref="home" ng-click="predicate='score'; reverse=true">Home</a></li>
+            <li role="presentation"><a ui-sref="home" ng-click="predicate='time'; reverse=true">Newest</a></li>
+            <li role="presentation"><a ui-sref="home" ng-click="predicate='votes'; reverse=true">Most Popular</a></li>
             <li role="presentation"><a ui-sref="links">Add Link</a></li>
-            <li role="presentation"><a href="#somewhereelse">Something Else</a></li>
           </ul>
       </div>
       </div>

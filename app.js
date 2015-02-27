@@ -12,6 +12,19 @@ nerdNews.config(function($stateProvider){
     templateUrl: "partials/addlink.html",
     controller: "LinksCtrl"
   });
+
+  $stateProvider.state('newest', {
+    url: "/newest.html",
+    templateUrl: "partials/newest.html",
+    controller: "LinksCtrl"
+  });
+
+  $stateProvider.state('popular', {
+    url: "/popular.html",
+    templateUrl: "partials/popular.html",
+    controller: "LinksCtrl"
+  });
+
 });
 
 
