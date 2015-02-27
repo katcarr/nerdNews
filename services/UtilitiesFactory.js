@@ -1,3 +1,0 @@
-findById = function(){
-  var testLink =
-};

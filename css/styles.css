@@ -22,3 +22,7 @@ body {
 .checkbox {
   display: none;
 }
+
+.btn {
+  margin-top: -20%;
+}
